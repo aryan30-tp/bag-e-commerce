@@ -1,2 +1,2 @@
-# bag-e-commerce
+# e-commerce
 learning to create an e-commerce platform
