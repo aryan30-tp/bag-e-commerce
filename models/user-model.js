@@ -12,15 +12,17 @@ const userSchema= mongoose.Schema({
     },
     email: String,
     password: String,
-    cart: { 
-        type: Array ,
-        default: []
-    },
-    isAdmin: Boolean,
-    orders: { 
-        type: Array ,
-        default: []
-    },
+    cart: [{ 
+        product: {
+            type: mongoose.Schema.Types.ObjectId, 
+            ref: 'products'
+        },
+        quantity: {
+            type: Number,
+            default: 1
+        }
+    }],
+    
     contact: Number,
     picture: String
 })
